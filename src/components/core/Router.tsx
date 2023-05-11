@@ -6,8 +6,11 @@ function Router() {
   return (
     <div>
       <Routes>
-        <Route index element={<NoticeList />} />
-        <Route path="productDetail/:id" element={<NoticeDetail />} />
+        <Route index path="noticeboard/" element={<NoticeList />} />
+        <Route
+          path="noticeboard/productDetail/:id"
+          element={<NoticeDetail />}
+        />
       </Routes>
     </div>
   );
