@@ -38,6 +38,7 @@ const NoticeList = () => {
           <StyledContainer>
             {preparedContent.map((notice) => (
               <NoticeTile
+                key={notice.id}
                 title={notice.title || ""}
                 user={notice.user}
                 body={notice.body || ""}

@@ -135,7 +135,7 @@ const NoticeTile = ({ title, user, body, comments, id }: NoticeTileProps) => {
         {screenSize === "m" && isOpen && (
           <Description lines={100}>
             {comments.map((comment: Comment) => (
-              <CommentWrapper>
+              <CommentWrapper key={comment.id}>
                 From {comment.email}
                 <br />
                 {comment.body}
@@ -152,7 +152,7 @@ const NoticeTile = ({ title, user, body, comments, id }: NoticeTileProps) => {
         >
           <div>
             {comments.map((comment: Comment) => (
-              <CommentWrapper>
+              <CommentWrapper key={comment.id}>
                 From {comment.email}
                 <br />
                 {comment.body}
